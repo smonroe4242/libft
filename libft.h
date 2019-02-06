@@ -6,7 +6,7 @@
 /*   By: smonroe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/16 06:44:19 by smonroe           #+#    #+#             */
-/*   Updated: 2018/08/27 17:28:50 by smonroe          ###   ########.fr       */
+/*   Updated: 2019/01/02 10:07:56 by smonroe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdlib.h>
 # include <string.h>
 # include <stdarg.h>
+# include <fcntl.h>
 # define BUFF_SIZE 4096
 # define FDS 4986
 # define MAX3(a, b, c) ((a > b && a > c) ? c : (b > c && b > a) ? b : c)
@@ -84,6 +85,10 @@ int					ft_printf(char *str, ...);
 **		libftprintf
 */
 
+char				*g_optarg;
+int					g_optind;
+int					g_optopt;
+int					ft_getopt(int argc, char **argv, char *flg);
 int					get_next_line(int fd, char **line);
 
 int					ft_rand(int max);
@@ -128,6 +133,7 @@ char				*ft_strappfr(char *s1, char *s2);
 char				*ft_strmrg(char *s1, char *s2);
 char				*ft_strtrim(char const *s);
 char				**ft_strsplit(char const *s, char c);
+char				**ft_strsplitwsp(char const *s);
 void				ft_strrev(char *s);
 char				*ft_strstr(const char *haystack, const char *needle);
 char				*ft_strnstr(const char *haystack, const char *needle,
@@ -147,6 +153,7 @@ int					ft_toupper(int c);
 int					ft_tolower(int c);
 
 void				ft_putchar(int c);
+void				ft_putwchar(uint32_t c);
 void				ft_putstr(char const *s);
 void				ft_putendl(char const *s);
 void				ft_putnbr(int n);

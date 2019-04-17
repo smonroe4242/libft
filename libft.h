@@ -6,7 +6,7 @@
 /*   By: smonroe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/16 06:44:19 by smonroe           #+#    #+#             */
-/*   Updated: 2019/04/16 20:02:25 by smonroe          ###   ########.fr       */
+/*   Updated: 2019/04/16 21:06:31 by smonroe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <string.h>
 # include <stdarg.h>
 # include <fcntl.h>
+# include <stdint.h>
 # define BUFF_SIZE 4096
 # define FDS 4986
 # define MAX3(a, b, c) ((a > b && a > c) ? c : (b > c && b > a) ? b : c)
@@ -28,17 +29,6 @@
 # define UMAX 4294967296
 # define LMAX 9223372036854775807
 # define NLMAX -9223372036854775808
-
-/*
-**		Basic Linux compatability
-*/
-
-# ifdef __unix__
-#  define uint64_t u_int64_t
-#  define uint32_t u_int32_t
-#  define uint16_t u_int16_t
-#  define uint8_t u_int8_t
-# endif
 
 /*
 **		Struct Definitions

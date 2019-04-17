@@ -6,7 +6,7 @@
 /*   By: smonroe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/16 08:10:38 by smonroe           #+#    #+#             */
-/*   Updated: 2018/08/23 23:10:17 by smonroe          ###   ########.fr       */
+/*   Updated: 2019/04/16 21:10:28 by smonroe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int		ft_atoi(const char *str)
 {
-	int		i;
-	int		l;
-	long	n;
+	int			i;
+	int			l;
+	long long	n;
 
 	i = 0;
 	n = 0;

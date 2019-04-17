@@ -6,7 +6,7 @@
 /*   By: smonroe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/16 06:44:19 by smonroe           #+#    #+#             */
-/*   Updated: 2019/04/16 14:54:35 by smonroe          ###   ########.fr       */
+/*   Updated: 2019/04/16 20:02:25 by smonroe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,21 @@
 # define UMAX 4294967296
 # define LMAX 9223372036854775807
 # define NLMAX -9223372036854775808
+
+/*
+**		Basic Linux compatability
+*/
+
+# ifdef __unix__
+#  define uint64_t u_int64_t
+#  define uint32_t u_int32_t
+#  define uint16_t u_int16_t
+#  define uint8_t u_int8_t
+# endif
+
+/*
+**		Struct Definitions
+*/
 
 typedef struct		s_list
 {

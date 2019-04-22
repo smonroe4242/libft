@@ -6,7 +6,7 @@
 /*   By: smonroe <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/04/16 06:44:19 by smonroe           #+#    #+#             */
-/*   Updated: 2019/04/16 21:06:31 by smonroe          ###   ########.fr       */
+/*   Updated: 2019/04/21 22:52:25 by smonroe          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,6 @@
 # define FDS 4986
 # define MAX3(a, b, c) ((a > b && a > c) ? c : (b > c && b > a) ? b : c)
 # define MAX2(a, b) (a > b ? a : b)
-# define SWAP(x, y) ((x ^= y) && (y ^= x) && (x ^= y))
 # define ABS(x) ((x < 0) ? -x : x)
 # define IMAX 2147483627
 # define NIMAX -2147483648

@@ -6,7 +6,7 @@
 #    By: smonroe <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/04/16 06:21:48 by smonroe           #+#    #+#              #
-#    Updated: 2019/01/02 10:09:37 by smonroe          ###   ########.fr        #
+#    Updated: 2019/04/23 20:40:09 by smonroe          ###   ########.fr        #
 #                                                                              #
 #******************************************************************************#
 
@@ -70,3 +70,13 @@ fclean: clean
 	@rm -rf $(NAME)
 
 re: fclean $(NAME) clean
+
+debug: fclean
+	@gcc -c -Wall -Werror -Wextra -g $(SRC)
+	@ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
+
+fsan: fclean
+	@gcc -c -Wall -Werror -Wextra -g -fsanitize=address $(SRC)
+	@ar rc $(NAME) $(OBJ)
+	ranlib $(NAME)
